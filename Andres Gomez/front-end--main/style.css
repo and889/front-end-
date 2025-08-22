@@ -1,0 +1,16 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(49, 196, 183);    
+}
+
+h1{
+    color: red;
+}
+
+h2{
+    color: yellow;
+}
+
+h3{
+    color: blue;
+}
