@@ -1,56 +1,33 @@
-console.log(" // javascript // ");
+console.log("Ejercicio")
 
-let fruits = ["appple", "banana", "cherry"];
+class SerVivo{
+  constructor(nombre, edad){
+    this.nombre = nombre;
+    this.edad = edad;
+  }
 
-console.log(" ")
-
-console.log(fruits);
-console.log(fruits.length);
-console.log(fruits[0]);
-console.log(fruits[1]);
-console.log(fruits[2]);
-
-console.log(" ")
-
-fruits.push("orange");
-console.log(fruits);
-console.log(fruits[3]);
-console.log(fruits.length);
-
-console.log(" ")
-
-fruits.pop();
-console.log(fruits);
-fruits.map((fruits, index) => {
-    console.log(index, fruits);
-    });
-
-console.log(" ")
-
-let score = Math.random()*100;
-console.log("punaje:", Math.round(score));
-
-console.log(" ")
-
-function greet(name) {
-  return "Hola " + name;
+  alimentarse() {
+    console.log(`${this.nombre}se esta alimentando`)
+  }
 }
-console.log("///// Función clásica /////");
-console.log("El resultado de pasar 'Diego' a la función greet es:");
-console.log(greet("Diego"));
 
-console.log(" ")
-
-function add(a, b) {
-  return a + b;
+class Animal extends SerVivo{
+  alimentarse(){
+    console.log(`${this.nombre}esta comiendo`)
+  } 
+  
 }
-console.log("///// Función con 2 parámetros y retorno /////");
-console.log("El resultado de pasar 5 y 3 como parámetros a la función add es:");
-console.log(add(5, 3));
 
-console.log(" ")
+class Planta extends SerVivo{
+  alimentarse(){
+    console.log(`${this.nombre}esta haciendo la fotosintesis`)
+  }
+}
 
-const multiply = (a, b) => a * b;
-console.log("///// Función flecha /////");
-console.log("El resultado de pasar 4 y 2 como parámetros a la función multiply es:");
-console.log(multiply(4, 2));
+const gato = new Animal(michi, 2);
+console.log(`El nombre del gato es ${this.nombre}`);
+gato.alimentarse();
+
+const flor = new Planta(flor, 100);
+console,log(`el nombre de la planta es ${this.nombre}`);
+flor.alimentarse();
